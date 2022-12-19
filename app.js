@@ -102,7 +102,7 @@ window.onload = function () {
 
 
     function draw() {
-        maze();
+
 
         if (direction == 0) {
             return
@@ -119,8 +119,7 @@ window.onload = function () {
         else if (direction == 4) {
             x += 1;
         } else { return }
-
-        context.clearRect(0, 0, 600, 400);
+        maze();
         context.beginPath();
         context.arc(x, y, circleSize, 0, pi);
 
@@ -140,6 +139,8 @@ window.onload = function () {
 
 
     }
+
+
 
     var canvas = document.getElementById("canvas");
     var context = canvas.getContext("2d");
